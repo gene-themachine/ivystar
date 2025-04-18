@@ -1,0 +1,464 @@
+:root {
+  --accent-lime: #c5ff41;
+  --accent-orange: #e67e22;
+  --accent-yellow: #f1c40f;
+}
+
+.productivity-hub-container {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Updated Header with Pennant Icon */
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.pennant-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  transform: rotate(5deg);
+  animation: gentle-sway 3s ease-in-out infinite;
+}
+
+@keyframes gentle-sway {
+  0% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  100% { transform: rotate(5deg); }
+}
+
+.page-title {
+  font-size: 3.5rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  font-family: Georgia, serif;
+  letter-spacing: -1px;
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.page-description {
+  font-size: 1.3rem;
+  color: #FFFFFF;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Hub Banner */
+.hub-banner {
+  background: rgba(30, 30, 30, 0.5);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.hub-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(197, 255, 65, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  font-family: Georgia, serif;
+}
+
+.banner-text {
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Updated Tabs with Icons */
+.tab-container {
+  margin-bottom: 4rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tab-icon {
+  font-size: 1.3rem;
+}
+
+.tab-button:hover {
+  color: #FFFFFF;
+}
+
+.tab-button.active {
+  color: #FFFFFF;
+}
+
+.tab-button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.tab-content {
+  min-height: 400px;
+}
+
+/* Updated Resource/Tool/Template Grids */
+.resources-grid,
+.tools-grid,
+.templates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  gap: 2rem;
+}
+
+/* Resource Cards with Ivy League Styling */
+.resource-card, .tool-card, .template-card {
+  background-color: rgba(25, 25, 25, 0.8);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.resource-card:hover, .tool-card:hover, .template-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.ivy-inspired {
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.resource-badge, .tool-badge, .template-badge {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000000;
+  padding: 0.3rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.resource-icon, .tool-icon, .feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.resource-title, .tool-title, .template-title {
+  font-size: 1.4rem;
+  color: #FFFFFF;
+  margin-bottom: 0.8rem;
+  font-family: Georgia, serif;
+}
+
+.resource-description, .tool-description, .template-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  line-height: 1.6;
+}
+
+.resource-link {
+  color: #FFFFFF;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
+  text-decoration: underline;
+}
+
+.resource-link:hover {
+  opacity: 0.8;
+}
+
+/* Tool Cards */
+.tool-button {
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.tool-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tool-card.coming-soon {
+  background-color: rgba(25, 25, 25, 0.5);
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Template Cards */
+.template-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.template-link {
+  color: #FFFFFF;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-decoration: underline;
+  position: relative;
+}
+
+.template-link::after {
+  content: '→';
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.template-link:hover {
+  opacity: 0.8;
+}
+
+.template-link:hover::after {
+  transform: translateX(5px);
+}
+
+/* Feature Section */
+.feature-section {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.feature-heading h2 {
+  font-size: 2.5rem;
+  color: #FFFFFF;
+  margin-bottom: 3rem;
+  font-family: Georgia, serif;
+  position: relative;
+  display: inline-block;
+}
+
+.feature-heading h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: rgba(25, 25, 25, 0.8);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  font-family: Georgia, serif;
+}
+
+.feature-card p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Updated Newsletter Section */
+.newsletter-section {
+  margin-top: 3rem;
+}
+
+.newsletter-container {
+  background: rgba(30, 30, 30, 0.5);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.newsletter-content {
+  padding: 3rem;
+  text-align: center;
+}
+
+.newsletter-title {
+  font-size: 2.2rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  font-family: Georgia, serif;
+}
+
+.newsletter-description {
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.email-input {
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  flex-grow: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.email-input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.subscribe-button {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000000;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.subscribe-button:hover {
+  background-color: #FFFFFF;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .subscribe-button {
+    width: 100%;
+  }
+  
+  .tab-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .resources-grid,
+  .tools-grid,
+  .templates-grid,
+  .features-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+  }
+  
+  .banner-title, 
+  .feature-heading h2,
+  .newsletter-title {
+    font-size: 2rem;
+  }
+} 

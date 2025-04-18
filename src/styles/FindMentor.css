@@ -1,0 +1,257 @@
+:root {
+  --accent-lime: #c5ff41;
+  --accent-orange: #e67e22;
+  --accent-yellow: #f1c40f;
+}
+
+.find-mentor-container {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-title {
+  font-size: 3rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  font-family: Georgia, serif;
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.page-description {
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Intro Section */
+.intro-section {
+  margin-bottom: 3rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.intro-text h2 {
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-family: Georgia, serif;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #FFFFFF;
+}
+
+.benefits-list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.benefits-list li {
+  padding: 0.8rem;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #FFFFFF;
+  font-size: 1rem;
+}
+
+.benefit-highlight {
+  color: #FFFFFF;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.filter-container {
+  margin-bottom: 3rem;
+}
+
+.filter-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-button {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.filter-button.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+}
+
+.mentors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2.5rem;
+}
+
+.mentor-card {
+  background-color: rgba(25, 25, 25, 0.8);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  padding-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mentor-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.mentor-image-placeholder {
+  width: 100%;
+  height: 180px;
+  background-color: rgba(30, 30, 30, 0.9);
+  position: relative;
+}
+
+.mentor-specialty {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000000;
+  padding: 0.4rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.mentor-name {
+  padding: 1.5rem 1.5rem 0.5rem;
+  font-size: 1.3rem;
+  color: #FFFFFF;
+  font-family: Georgia, serif;
+}
+
+.mentor-title {
+  padding: 0 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.mentor-description {
+  padding: 0 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  min-height: 60px;
+}
+
+.mentor-stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.mentor-rating {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+}
+
+.mentor-sessions {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+}
+
+.connect-button {
+  margin: 0 1.5rem;
+  width: calc(100% - 3rem);
+  padding: 0.8rem;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.connect-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mentor-card.coming-soon {
+  background-color: rgba(25, 25, 25, 0.5);
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.mentor-card.coming-soon .mentor-image-placeholder {
+  background-color: rgba(30, 30, 30, 0.5);
+}
+
+.mentor-card.coming-soon .mentor-name {
+  color: #FFFFFF;
+}
+
+.mentor-card.coming-soon .mentor-description {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .find-mentor-container {
+    padding: 2rem 1rem;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+  }
+  
+  .filter-options {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filter-button {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .benefits-list {
+    grid-template-columns: 1fr;
+  }
+} 
